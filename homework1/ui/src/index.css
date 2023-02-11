@@ -1,0 +1,161 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.chat-view {
+  display: flex;
+  height: 500px;
+}
+
+.left-panel {
+  width: 30%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.right-panel {
+  width: 70%;
+  padding: 20px;
+}
+
+.history-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.history-input {
+  font-weight: bold;
+}
+
+form {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+  width: auto;
+}
+
+button[type="submit"] {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin: 20px auto;
+  text-align: center;
+  width: 200px
+}
+button:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 200px;
+}
+
+/* chat history */
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.history-input {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.history-output {
+  color: gray;
+}
+
+/* signup link */
+.signup-link {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin: 20px auto;
+  text-align: center;
+  width: 200px
+}
+
+.signup-link:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* login link */
+.login-link {
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin: 20px auto;
+  text-align: center;
+  width: 200px
+}
+
+.login-link:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
