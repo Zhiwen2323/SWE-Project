@@ -32,6 +32,9 @@ mysql -u root
 Note, if you are using windows, you need to download mysql from website such as :https://dev.mysql.com/downloads/installer/
 and start it at https://dev.mysql.com/doc/refman/8.0/en/windows-start-service.html
 
+5. In oder to use OpenAI ChatGPT API, you need to sign up an account at https://chat.openai.com/, and you can create your own API token at: https://platform.openai.com/account/api-keys \
+**REMEMBER** DO NOT push your api token into github
+
 ## Task
 The homework contains 3 parts
 - Finish All TODO in the `ui/src/components/*.jsx`
