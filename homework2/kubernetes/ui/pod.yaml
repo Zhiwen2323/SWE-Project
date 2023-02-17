@@ -1,0 +1,13 @@
+# react-ui-pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: react-ui
+spec:
+  containers:
+  - name: react-ui
+    image: docker.io/library/ui:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 3000
+

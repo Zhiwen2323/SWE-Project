@@ -1,0 +1,13 @@
+# react-ui-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-ui
+spec:
+  selector:
+    app: react-ui
+  ports:
+  - name: http
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP
