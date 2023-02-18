@@ -1,4 +1,5 @@
-# Homework 2 - DevOps lead to infrasturcture engineer
+# Homework 2 - Infrastructure and Devops
+This homework is meant to help you get familiar with docker, kubernetes and buildkite, and use it to build your chatgpt application.
 
 ## Tasks
 The main task is to finish the docker and kubernetes for the ui and api. \
