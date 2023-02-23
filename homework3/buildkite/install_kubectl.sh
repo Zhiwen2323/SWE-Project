@@ -7,4 +7,4 @@ curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s ht
 chmod +x kubectl
 
 # Move the kubectl binary to a directory in your PATH
-sudo mv kubectl /usr/local/bin/
+mv kubectl /usr/local/bin/
