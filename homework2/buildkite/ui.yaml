@@ -1,18 +1,9 @@
 steps:
-  - command: "git clone https://github.com/leftdata/SWE-Project.git"
-    label: "clone repo"
-
-  - wait
-
   - command: "./homework1/install_mac.sh"
     label: "prepare_env"
 
-  - wait
-
   - command: " docker build -f ./homework2/docker/ui.Dockerfile -t ui:now_latest ./homework1/ui/"
     label: "docker build ui"
-
-  - wait
 
   - command: "kubectl apply -f ./homework2/kubernetes/ui/deployment.yaml"
     label: "deploy ui"
