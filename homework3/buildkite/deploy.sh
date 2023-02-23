@@ -13,7 +13,7 @@ echo '--- :kubernetes: Shipping'
 
 ls
 
-envsubst < ./homework2/kubernetes/ui/deployment.yml > "${manifest}"
+envsubst < ./homework2/kubernetes/ui/deployment.yaml > "${manifest}"
 kubectl apply -f "${manifest}"
 
 echo '--- :zzz: Waiting for deployment'
