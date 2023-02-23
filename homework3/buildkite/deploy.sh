@@ -11,7 +11,9 @@ manifest="$(mktemp)"
 
 echo '--- :kubernetes: Shipping'
 
-envsubst < ../../homework2/kubernetes/ui/deployment.yml > "${manifest}"
+ls
+
+envsubst < ./homework2/kubernetes/ui/deployment.yml > "${manifest}"
 kubectl apply -f "${manifest}"
 
 echo '--- :zzz: Waiting for deployment'
