@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# check if package manager is installed
-if ! command -v apt-get > /dev/null; then
-  echo "Package manager is not installed. Please install it first."
-  exit 1
-fi
-
 # Install required packages
 sudo apt-get update
 sudo apt-get install -y nodejs mysql-server python3-pip
