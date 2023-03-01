@@ -23,6 +23,8 @@ spec:
           volumeMounts:
             - name: buildkite-builds
               mountPath: /buildkite/builds
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
         - name: dind-daemon
           image: docker:20.10.6-dind
           command: ["dockerd", "--host=unix:///var/run/docker.sock", "--host=tcp://0.0.0.0:2375"]
@@ -39,3 +41,8 @@ spec:
           emptyDir: {}
         - name: buildkite-builds
           emptyDir: {}
+        - name: docker-sock
+          emptyDir: {}
+      serviceAccountName: my-service-account
+      automountServiceAccountToken: true
+

@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: my-role
+rules:
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["deployments", "replicasets", "pods", "services"]
+  verbs: ["get", "watch", "list", "create", "update", "patch", "delete"]
+- apiGroups: ["", "extensions", "apps"]
+  resources: ["configmaps"]
+  verbs: ["get", "watch", "list", "create", "update", "patch", "delete"]
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "watch", "list", "create", "update", "patch", "delete"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: my-role-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: my-role
+subjects:
+  - kind: ServiceAccount
+    name: my-service-account
+    namespace: default

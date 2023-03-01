@@ -4,8 +4,13 @@ steps:
 
   - wait
 
-  - command: " docker build -f ./homework2/docker/ui.Dockerfile -t ui:now_latest ./homework1/ui/"
-    label: "docker build ui"
+  - command: "./homework3/buildkite/install_kubectl.sh"
+    label: "prepare env"
+
+  - wait
+
+  - command: "./homework3/buildkite/build_ui.sh"
+    label: "build ui"
 
   - wait
 
