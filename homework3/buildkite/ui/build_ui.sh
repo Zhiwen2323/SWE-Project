@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # build image
 docker build -f ./homework2/docker/ui.Dockerfile -t ui:latest ./homework1/ui
 
