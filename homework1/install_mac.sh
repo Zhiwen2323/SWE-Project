@@ -32,4 +32,5 @@ brew services start mysql
 npm install react react-dom
 
 # install flask & openai
-pip3 install aiohttp flask flask-cors flask-mysql openai flask-session
+pip3 install aiohttp flask flask-cors flask-mysql openai flask-session pika
+

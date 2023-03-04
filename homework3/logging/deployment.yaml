@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbitmq-worker
+spec:
+  replicas: 3  # Set the desired number of replicas
+  selector:
+    matchLabels:
+      app: rabbitmq-worker
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-worker
+    spec:
+      containers:
+      - name: rabbitmq-worker
+        image: your-docker-image:latest  # Set the Docker image for your RabbitMQ worker
+        env:
+        - name: RABBITMQ_HOST
+          value: my-rabbitmq-cluster-rabbitmq  # Set the hostname of your RabbitMQ broker
+        - name: RABBITMQ_QUEUE
+          value: my-queue  # Set the name of the RabbitMQ queue that your worker will consume from

@@ -11,7 +11,9 @@ After that you should be able to have an continuous delivery to the Google cloud
 ## Tasks
 1. Finish the `homework3/buildkite/api/` following the ui.
 2. Add logging into homework1
-3. Update the kubernetes networking to expose chatgpt UI to the internet.
+3. Finish the TODO in `./homework3/logging/logging/log_worker` to make the log worker runnable.
+4. Update the `./homework3/logging/deployment.yaml` to automatically deploy the log worker in kubernetes cluster
+5. Update the kubernetes networking to expose chatgpt UI to the internet.
 
 ## Submission
 
