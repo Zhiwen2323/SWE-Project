@@ -9,10 +9,10 @@ steps:
 
   - wait
 
-  - command: "./homework3/buildkite/build_ui.sh"
+  - command: "./homework3/buildkite/ui/build_ui.sh"
     label: "build ui"
 
   - wait
 
   - label: ":rocket: Push to :kubernetes:"
-    command: "./homework3/buildkite/deploy.sh"
+    command: "./homework3/buildkite/ui/deploy.sh"
