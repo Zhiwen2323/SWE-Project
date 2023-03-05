@@ -3,7 +3,7 @@
 set -euo pipefail
 
 manifest="$(mktemp)"
-$DOCKER_REPO=$DOCKER_REPO
+DOCKER_REPO=$DOCKER_REPO
 
 echo '--- :kubernetes: Shipping'
 

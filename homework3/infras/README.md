@@ -28,3 +28,5 @@ Zone: us-east1-b \
 4. git clone repository and cd into it
 5. Simply run `./homework3/infras/startup.sh <BUILDKITE_AGENT_TOKEN>` with your buildkite agent token to startup all
 required infras including buildkite agent and rabbitmq cluster.
+
+## How to expose kubernetes service into internet
