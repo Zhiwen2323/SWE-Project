@@ -30,3 +30,7 @@ Zone: us-east1-b \
 required infras including buildkite agent and rabbitmq cluster.
 
 ## How to expose kubernetes service into internet
+We will simplify the process to expose the service to internet
+1. First go to the GCP console and click Service & Ingress which will show all the service that can routed to the internet
+![kubernetes_service.png](images%2Fkubernetes_service.png)
+2. 

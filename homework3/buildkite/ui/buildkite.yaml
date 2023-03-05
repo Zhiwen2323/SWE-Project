@@ -4,7 +4,7 @@ steps:
 
   - wait
 
-  - command: "./homework3/buildkite/install_kubectl.sh"
+  - command: "./homework3/buildkite/install_envs.sh"
     label: "prepare env"
 
   - wait
