@@ -15,4 +15,4 @@ steps:
   - wait
 
   - label: ":rocket: Push to :kubernetes:"
-    command: "./homework3/buildkite/ui/deploy.sh"
+    command: "./homework3/buildkite/ui/deploy_ui.sh"

@@ -14,6 +14,12 @@ Zone: us-east1-b \
 
 4. Click CREATE
 
+## How to use Docker Hub to pull and push your docker images
+1. Open Docker Hub and signup or login to your docker hub account at https://hub.docker.com/
+2. Create a public repository and specify a name such as chatgpt-ui
+![docker_create_repo.png](images%2Fdocker_create_repo.png)
+
+
 ## How to install required infras
 1. Connect to your cluster by clicking CONNECT:
 ![connect_cluster.png](images%2Fconnect_cluster.png)
@@ -22,5 +28,3 @@ Zone: us-east1-b \
 4. git clone repository and cd into it
 5. Simply run `./homework3/infras/startup.sh <BUILDKITE_AGENT_TOKEN>` with your buildkite agent token to startup all
 required infras including buildkite agent and rabbitmq cluster.
-
-
