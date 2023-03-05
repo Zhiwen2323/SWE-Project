@@ -10,6 +10,3 @@ echo '--- :kubernetes: Shipping'
 APP="./homework2/kubernetes/ui/deployment.yaml"
 export IMAGE_ID="$DOCKER_REPO:latest"
 envsubst < $APP | kubectl apply -f -
-
-echo '--- :zzz: Waiting for deployment'
-kubectl wait --for condition=available --timeout=300s -f $APP
