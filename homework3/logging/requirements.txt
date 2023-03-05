@@ -1,0 +1,2 @@
+pika==1.2.0
+google-cloud-storage==1.45.0

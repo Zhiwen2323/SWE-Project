@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: rabbitmq-worker
 spec:
-  replicas: 3  # Set the desired number of replicas
+  replicas: 2  # Set the desired number of replicas
   selector:
     matchLabels:
       app: rabbitmq-worker

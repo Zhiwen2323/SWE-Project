@@ -1,5 +1,5 @@
 import pika
-import boto3
+from google.cloud import storage
 
 # Set up RabbitMQ connection
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
@@ -8,13 +8,14 @@ channel = connection.channel()
 # Declare queue for logs
 channel.queue_declare(queue='logs')
 
-# Set up S3 client
-s3 = boto3.client('s3')
+# Set up GCS client
+storage_client = storage.Client()
+bucket = storage_client.bucket('my_bucket')
 
 
-# Callback function to consume logs and write to S3
+# Callback function to consume logs and write to GCS
 def callback(ch, method, properties, body):
-    # TODO Write log to S3
+    # TODO Write log to GCS
     return
 
 

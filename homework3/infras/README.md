@@ -31,6 +31,9 @@ required infras including buildkite agent and rabbitmq cluster.
 
 ## How to expose kubernetes service into internet
 We will simplify the process to expose the service to internet
-1. First go to the GCP console and click Service & Ingress which will show all the service that can routed to the internet
+1. Update the service account in your `homework2/kubernetes/ui/deployment.yaml` and `homework2/kubernetes/api/deployment.yaml` to
+from `type: ClusterIP` to `type: LoadBalancer`, this will create an external IP for your UI or API.
+2. Go to the GCP console and click Service & Ingress which will show all the service that can routed to the internet
 ![kubernetes_service.png](images%2Fkubernetes_service.png)
-2. 
+3. Click on the service endpoint, e.g `104.196.11.0:3000` in below image. this will open the public website for you
+![ui_service_endpoint.png](images%2Fui_service_endpoint.png)
