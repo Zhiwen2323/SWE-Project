@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: buildkite
-          image: "buildkite/agent:3.29.0"
+          image: "buildkite/agent:ubuntu"
           env:
             - name: DOCKER_HOST
               value: tcp://localhost:2375
