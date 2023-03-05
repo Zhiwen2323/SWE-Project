@@ -8,7 +8,7 @@ DOCKER_REPO=$DOCKER_REPO
 echo '--- :kubernetes: Shipping'
 
 APP="./homework2/kubernetes/ui/deployment.yaml"
-IAMGE_ID="$DOCKER_REPO:latest"
+export IMAGE_ID="$DOCKER_REPO:latest"
 envsubst < $APP | kubectl apply -f -
 
 echo '--- :zzz: Waiting for deployment'
