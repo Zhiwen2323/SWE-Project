@@ -1,0 +1,36 @@
+# chatgpt-api-deployment.yaml
+chatgpt-apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatgpt-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chatgpt-api
+  template:
+    metadata:
+      labels:
+        app: chatgpt-api
+    spec:
+      containers:
+      - name: chatgpt-api
+        image: $IMAGE_ID
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+
+# chatgpt-api-service.yaml
+---
+chatgpt-apiVersion: v1
+kind: Service
+metadata:
+  name: chatgpt-api
+spec:
+  selector:
+    app: chatgpt-api
+  ports:
+  - name: http
+    port: 5000
+    targetPort: 5000
+  type: LoadBalancer

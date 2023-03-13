@@ -25,3 +25,5 @@ channel.basic_consume(queue='logs', on_message_callback=callback, auto_ack=True)
 # Start consuming logs
 print('Consuming logs...')
 channel.start_consuming()
+
+from collections import OrderedDict
