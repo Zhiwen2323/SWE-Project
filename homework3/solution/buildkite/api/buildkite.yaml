@@ -1,0 +1,18 @@
+steps:
+  - command: "git clone https://github.com/leftdata/SWE-Project.git"
+    label: "clone repo"
+
+  - wait
+
+  - command: "./homework3/buildkite/install_envs.sh"
+    label: "prepare env"
+
+  - wait
+
+  - command: "./homework3/buildkite/api/build_api.sh"
+    label: "build api"
+
+  - wait
+
+  - label: ":rocket: Push to :kubernetes:"
+    command: "./homework3/buildkite/api/deploy_api.sh"

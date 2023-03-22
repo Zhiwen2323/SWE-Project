@@ -15,17 +15,8 @@ bucket = storage_client.bucket('my_bucket')
 
 # Callback function to consume logs and write to GCS
 def callback(ch, method, properties, body):
-    # Get log message
-    log_message = body.decode('utf-8')
-
-    # Create GCS blob object
-    blob = bucket.blob('logs/my_log.txt')
-
-    # Write log message to blob
-    blob.upload_from_string(log_message)
-
-    # Print confirmation message
-    print('Log written to GCS')
+    # TODO Write log to GCS
+    return
 
 
 # Set up consumer to consume logs from RabbitMQ and call callback function
